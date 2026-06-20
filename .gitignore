@@ -1,0 +1,4 @@
+src/config.py
+data/raw/
+__pycache__/
+*.pyc
