@@ -1,0 +1,5 @@
+price_category,total_restaurants,average_rating,average_votes
+1. Budget (<=300),3201,3.54,71.0
+2. Mid-Range (301-600),3807,3.57,160.0
+3. Premium (601-1000),1471,3.71,411.0
+4. Luxury (>1000),765,4.1,1054.0

@@ -1,0 +1,16 @@
+location,name,rate,votes,cost_for_two,rest_type,cuisines
+Sarjapur Road,Byg Brewski Brewing Company,4.9,16345,1600.0,Microbrewery,"Continental, North Indian, Italian, South Indian, Finger Food"
+BTM,AB's - Absolute Barbecues,4.9,6375,1600.0,Casual Dining,"European, Mediterranean, North Indian, BBQ"
+Whitefield,Flechazo,4.9,2745,1400.0,Casual Dining,"Asian, Mediterranean, North Indian, BBQ"
+Koramangala 5th Block,Asia Kitchen By Mainland China,4.9,2178,1500.0,"Casual Dining, Bar","Asian, Chinese, Thai, Momos"
+Indiranagar,Milano Ice Cream,4.9,2090,400.0,Dessert Parlor,"Ice Cream, Desserts"
+Malleshwaram,Punjab Grill,4.9,1940,2000.0,Casual Dining,"North Indian, Mughlai"
+Brigade Road,Belgian Waffle Factory,4.9,1746,400.0,Dessert Parlor,Desserts
+Marathahalli,AB's - Absolute Barbecues,4.8,12121,1600.0,Casual Dining,"European, Mediterranean, North Indian, BBQ"
+Basavanagudi,Brahmin's Coffee Bar,4.8,2679,100.0,Quick Bites,South Indian
+Rajajinagar,O.G. Variar & Sons,4.8,1156,200.0,Bakery,"Bakery, Desserts"
+Vasanth Nagar,Belgian Waffle Factory,4.8,392,400.0,Dessert Parlor,Desserts
+Kalyan Nagar,Belgian Waffle Factory,4.8,265,400.0,Dessert Parlor,Desserts
+Old Airport Road,Big Pitcher,4.7,9021,1800.0,"Pub, Microbrewery","American, Continental, North Indian, Mediterranean"
+HSR,TBC Sky Lounge,4.7,6745,1000.0,"Casual Dining, Bar","Continental, Asian, Italian, North Indian"
+Cunningham Road,Hammered,4.7,4639,1300.0,"Pub, Cafe","North Indian, Thai, Japanese, Continental, Cafe"
