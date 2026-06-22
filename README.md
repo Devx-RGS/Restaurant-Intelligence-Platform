@@ -66,4 +66,6 @@ This project takes a raw, noisy dataset of 50,000+ restaurants and transforms it
    Navigate to `http://127.0.0.1:5000` in your web browser.
 
 <img width="1230" height="881" alt="Screenshot 2026-06-22 224416" src="https://github.com/user-attachments/assets/85b79c2c-8ff4-411b-bb4d-af872efd3c6e" />
+
+
 <img width="655" height="921" alt="image" src="https://github.com/user-attachments/assets/68474eab-8168-42f8-bdc9-8b1df3e04e8d" />
