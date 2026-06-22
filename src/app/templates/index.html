@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Intelligence Platform</title>
+    <!-- Favicon (Emoji) -->
+    <link rel="icon" href="https://fav.farm/🍽️">
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Restaurant Intelligence <span class="highlight">Platform</span></h1>
+            <p>Advanced CatBoost Engine with Live NLP Sentiment Analysis</p>
+        </header>
+
+        <!-- Main Interface -->
+        <main class="main-content">
+            
+            <!-- Mode Selection -->
+            <div class="mode-selector">
+                <button id="btn-mode-a" class="mode-btn active" onclick="switchMode('A')">Mode A: New Restaurant</button>
+                <button id="btn-mode-b" class="mode-btn" onclick="switchMode('B')">Mode B: Optimizer</button>
+            </div>
+
+            <!-- Form -->
+            <form id="prediction-form" class="prediction-form">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Location (Micro-Market)</label>
+                        <select id="location" required>
+                            <option value="BTM">BTM Layout</option>
+                            <option value="Koramangala 5th Block">Koramangala 5th Block</option>
+                            <option value="HSR">HSR Layout</option>
+                            <option value="Indiranagar">Indiranagar</option>
+                            <option value="JP Nagar">JP Nagar</option>
+                            <option value="Jayanagar">Jayanagar</option>
+                            <option value="Whitefield">Whitefield</option>
+                            <option value="Marathahalli">Marathahalli</option>
+                            <option value="Bannerghatta Road">Bannerghatta Road</option>
+                            <option value="Bellandur">Bellandur</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Restaurant Type</label>
+                        <select id="rest_type" required>
+                            <option value="Quick Bites">Quick Bites</option>
+                            <option value="Casual Dining">Casual Dining</option>
+                            <option value="Cafe">Cafe</option>
+                            <option value="Delivery">Delivery</option>
+                            <option value="Dessert Parlor">Dessert Parlor</option>
+                            <option value="Takeaway, Delivery">Takeaway & Delivery</option>
+                            <option value="Bakery">Bakery</option>
+                            <option value="Beverage Shop">Beverage Shop</option>
+                            <option value="Food Court">Food Court</option>
+                            <option value="Bar">Bar</option>
+                        </select>
+
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Cost for Two (₹)</label>
+                        <input type="number" id="cost_for_two" value="500" min="50" max="10000" required>
+                    </div>
+                </div>
+
+                <!-- Toggles -->
+                <div class="toggles-row">
+                    <label class="toggle-label">
+                        <input type="checkbox" id="online_order" checked>
+                        <span>Has Online Delivery</span>
+                    </label>
+                    <label class="toggle-label">
+                        <input type="checkbox" id="book_table">
+                        <span>Has Table Booking</span>
+                    </label>
+                </div>
+
+                <!-- Cuisines Input -->
+                <div class="form-group">
+                    <label>Top Cuisines (Comma separated)</label>
+                    <input type="text" id="cuisines" placeholder="e.g. North Indian, Chinese, Fast Food" required>
+                </div>
+
+                <!-- Post-Launch Optimization Fields (Mode B) -->
+                <div id="mode-b-fields" class="mode-b-fields hidden">
+                    <div class="form-divider"><span>Post-Launch Data</span></div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Total Votes</label>
+                            <input type="number" id="votes" value="150" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label>Number of Signature Dishes</label>
+                            <input type="number" id="num_liked_dishes" value="0" min="0">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Paste Recent Online Reviews <span class="badge">NLP Active</span></label>
+                        <textarea id="pasted_reviews" rows="3" placeholder="For the most accurate prediction, please paste your 5 to 10 most recent reviews here..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn" id="submit-btn">Run Prediction Engine</button>
+            </form>
+            
+            <!-- Results Dashboard (Hidden until prediction runs) -->
+            <div id="results-dashboard" class="results-dashboard hidden">
+                <h2>Predicted Rating</h2>
+                <div class="rating-display" id="rating-display">0.0</div>
+                
+                <!-- NLP Stats -->
+                <div id="nlp-stats-container" class="nlp-stats hidden">
+                    <p>Analyzed <strong id="review-count">0</strong> reviews.</p>
+                    <p>Live Sentiment Score: <strong id="sentiment-score">0.00</strong></p>
+                </div>
+
+                <!-- Actionable Recommendation -->
+                <div id="recommendation-box" class="recommendation-box hidden">
+                    <h3>AI Recommendation</h3>
+                    <p id="recommendation-text"></p>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Main Application Logic -->
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

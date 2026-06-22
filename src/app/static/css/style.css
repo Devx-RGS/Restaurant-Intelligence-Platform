@@ -1,0 +1,227 @@
+/* Color Palette and Variables */
+:root {
+    --bg-dark: #0f172a;
+    --bg-panel: rgba(255, 255, 255, 0.03);
+    --primary: #ef4444; /* Zomato Red */
+    --primary-hover: #dc2626;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --glass-blur: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Background with subtle glowing orbs */
+body {
+    background-color: var(--bg-dark);
+    background-image: radial-gradient(circle at 15% 50%, rgba(239, 68, 68, 0.10), transparent 25%),
+                      radial-gradient(circle at 85% 30%, rgba(59, 130, 246, 0.10), transparent 25%);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+/* Glassmorphism Container */
+.app-container {
+    background: var(--bg-panel);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 1.5rem 2rem;
+    width: 100%;
+    max-width: 650px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Header */
+.header { text-align: center; margin-bottom: 0.5rem; }
+.header h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 0.2rem; }
+.highlight { color: var(--primary); }
+.header p { color: var(--text-muted); font-size: 0.95rem; }
+
+/* Mode Selector Switcher */
+.mode-selector {
+    display: flex;
+    background: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    padding: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.mode-btn {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mode-btn.active {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+/* Forms and Inputs */
+.form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.8rem;
+}
+
+.form-row .form-group { margin-bottom: 0; }
+
+label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.badge {
+    background: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+}
+
+input, select, textarea {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
+select option { background: var(--bg-dark); }
+
+/* Checkbox Toggles */
+.toggles-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.toggle-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: var(--text-main);
+    font-size: 0.9rem;
+}
+
+/* Submit Button Gradient */
+.submit-btn {
+    width: 100%;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ef4444, #b91c1c);
+    color: white;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(239, 68, 68, 0.4);
+}
+
+/* Utility Classes */
+.hidden { display: none !important; }
+
+.form-divider {
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    line-height: 0.1em;
+    margin: 0.5rem 0 1rem;
+}
+
+.form-divider span {
+    background: var(--bg-dark);
+    padding: 0 10px;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+/* The Final Results Dashboard */
+.results-dashboard {
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    animation: fadeIn 0.5s ease; /* Smooth pop-in animation */
+}
+
+.rating-display {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #10b981; /* Emerald Green */
+    margin: 0.2rem 0;
+    text-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
+}
+
+.nlp-stats {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.recommendation-box {
+    background: rgba(59, 130, 246, 0.1);
+    border-left: 4px solid #3b82f6;
+    padding: 1rem;
+    border-radius: 4px 8px 8px 4px;
+    text-align: left;
+    color: #e2e8f0;
+}
+
+.recommendation-box h3 {
+    font-size: 0.9rem;
+    color: #60a5fa;
+    margin-bottom: 0.5rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
