@@ -24,7 +24,7 @@ def clean_zomato_data(file_path):
     
     
     print("Dropping useless columns...")
-    columns_to_drop = ['url', 'phone', 'dish_liked', 'menu_item', 'reviews_list']
+    columns_to_drop = ['url', 'phone', 'menu_item']
     df = df.drop(columns=columns_to_drop)
     
     print("Removing duplicate restaurants...")
@@ -44,7 +44,6 @@ def clean_zomato_data(file_path):
     
     df = df.dropna(subset=['cost_for_two'])
     
-    # 2.5 Drop rows where rest_type or cuisines are missing (only ~40 rows)
     print("Dropping rows with missing rest_type or cuisines...")
     df = df.dropna(subset=['rest_type', 'cuisines'])
     

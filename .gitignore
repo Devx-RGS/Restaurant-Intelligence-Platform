@@ -1,4 +1,12 @@
 src/config.py
+.env
+
 data/raw/
+data/cleaned/
+data/ml/
+
+models/
+catboost_info/
+
 __pycache__/
 *.pyc
