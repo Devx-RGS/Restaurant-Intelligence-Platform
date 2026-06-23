@@ -21,7 +21,7 @@ document.getElementById('prediction-form').addEventListener('submit', async (e) 
     
     const submitBtn = document.getElementById('submit-btn');
     const originalText = submitBtn.innerText;
-    submitBtn.innerText = 'Calculating Predictions...';
+    submitBtn.innerText = 'Calculating Rating...';
     submitBtn.disabled = true;
 
     try {

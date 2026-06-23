@@ -1,4 +1,4 @@
-# 🍽️ Restaurant Intelligence Platform
+# Restaurant Intelligence Platform
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
 ![CatBoost](https://img.shields.io/badge/CatBoost-Advanced%20GBDT-yellow.svg)
@@ -7,21 +7,21 @@
 
 An end-to-end Machine Learning Web Application designed to predict restaurant success and generate data-driven business recommendations in the highly competitive Bangalore (Zomato) market.
 
-## 🚀 Live Demo
+## Live Demo
 [**Click here to view the live project on Hugging Face Spaces!**](https://huggingface.co/spaces/Devx-RGS/Restaurant-Intelligence-Platform)
 
-## 💡 Overview
+## Overview
 This project takes a raw, noisy dataset of 50,000+ restaurants and transforms it into a production-ready AI tool. It features a **Dual-Engine Architecture** to solve the "Cold Start" problem for new restaurants, while optimizing existing ones using Live NLP Sentiment Analysis.
 
 ### Key Features
-- **🔮 Dual-Engine Predictor:** Uses two separate CatBoost models. One for pre-launch market viability, and one for post-launch active optimization.
-- **🧠 Live NLP Sentiment:** Integrates VADER NLP to instantly analyze pasted customer reviews and calculate a live sentiment score.
-- **📈 Counterfactual Recommendation Engine:** Runs background simulations (e.g., *What if we dropped prices by 10%?*) to generate the highest-impact business advice.
-- **⚡ Flask API + Glassmorphism UI:** A stateless Python backend serving a highly optimized HTML/CSS/JS frontend.
+- **Dual-Engine Predictor:** Uses two separate CatBoost models. One for pre-launch market viability, and one for post-launch active optimization.
+- **Live NLP Sentiment:** Integrates VADER NLP to instantly analyze pasted customer reviews and calculate a live sentiment score.
+- **Counterfactual Recommendation Engine:** Runs background simulations (e.g., *What if we dropped prices by 10%?*) to generate the highest-impact business advice.
+- **Flask API + Glassmorphism UI:** A stateless Python backend serving a highly optimized HTML/CSS/JS frontend.
 
 ---
 
-## 🛠️ Project Architecture
+## Project Architecture
 
 ### Phase 1: Data Cleaning & Engineering 
 - Cleaned 50,000+ noisy rows of Zomato data.
@@ -44,7 +44,7 @@ This project takes a raw, noisy dataset of 50,000+ restaurants and transforms it
 
 ---
 
-## ⚙️ How to Run Locally
+## How to Run Locally
 
 1. **Clone the repository:**
    ```bash
